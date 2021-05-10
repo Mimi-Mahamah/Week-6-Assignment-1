@@ -1,0 +1,121 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkcyan: hsl(179, 100%, 13%);
+    /* paragraphs */
+    --white: hsla(0, 0%, 100%, 0.75);
+    /* background, headings, buttons */
+    --gray: hsl(0, 0%, 95%);
+}
+
+@font-face {
+    font-family: 'Lexend-Deca', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+}
+
+@font-face {
+    font-family: 'Big Shoulders Display', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+}
+
+body {
+    background-color: var(--gray);
+    font-size: 15px;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    width: 45rem;
+    height: 25rem;
+    position: relative;
+    left: 18em;
+    top: 5em;
+}
+
+.sedans {
+    background-color: var(--orange);
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+#sedan {
+    color: var(--orange);
+}
+
+.suvs {
+    background-color: var(--cyan);
+}
+
+#suv {
+    color: var(--cyan);
+}
+
+.luxury {
+    background-color: var(--darkcyan);
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+#lux {
+    color: var(--darkcyan);
+}
+
+img {
+    position: relative;
+    left: 2em;
+    top: 2em;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    transform: scale(1.5, 3);
+    margin: 3em 5em 3em 3em;
+    position: relative;
+    left: 1em;
+    top: 1.5em;
+}
+
+p {
+    font-family: 'Lexend-Deca', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 5em 2em 3em 2.5em;
+    line-height: 2;
+}
+
+button {
+    padding: 1em 2.5em 1em 2.5em;
+    border-radius: 2em;
+    border: none;
+    position: relative;
+    bottom: 1rem;
+    left: 2rem;
+}
+
+
+/* Responsiveness Section */
+
+@media screen and (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 15rem;
+        height: 25rem;
+        position: relative;
+        left: 2em;
+        top: 5em;
+        justify-items: center;
+    }
+    .sedans {
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0em;
+    }
+    .luxury {
+        border-top-right-radius: 0em;
+        border-bottom-left-radius: 0.5em;
+    }
+    h1 {
+        left: 1.5em;
+    }
+}
